@@ -34,7 +34,7 @@ jobs:
           pip3 install -r ./requirements.txt
       - name: Run script for OneAPI
         run: |
-          python3 ./cursor_register.py --oneapi --oneapi_url "http://api.0ha.top" --oneapi_token "c03f83f7dcf04ea3ab1cfe7196785c97" --oneapi_channel_url "http://alist.0ha.top" --number 10 --max_workers 1 
+          python3 ./cursor_register.py --oneapi --oneapi_url "http://api.0ha.top" --oneapi_token "c03f83f7dcf04ea3ab1cfe7196785c97" --oneapi_channel_url "http://alist.0ha.top" --number 10 --max_workers 5 
       - name: Run script for csv
         if: ${{ github.event.inputs.ingest_to_oneapi == 'false' && github.event.inputs.upload_artifact == 'true' }}
         run: |
